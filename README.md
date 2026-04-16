@@ -2,6 +2,10 @@
 
 A full-stack project featuring role-based dashboards for administrators, store owners, and regular users. Built as part of a coding challenge to demonstrate clean architecture and modern UI/UX principles.
 
+## Demo
+
+![Application Walkthrough](Demo.mp4)
+
 ## Features
 
 ### Role-Based Access
