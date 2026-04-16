@@ -48,11 +48,11 @@ node init-db.js
 Create a `.env` file in the `backend` directory (referencing `.env.example`):
 ```dotenv
 PORT=4000
-PGHOST=localhost
+PGHOST=your_db_host
 PGPORT=5432
-PGUSER=postgres
-PGPASSWORD=postgres
-PGDATABASE=internship
+PGUSER=your_db_user
+PGPASSWORD=your_db_password
+PGDATABASE=your_db_name
 JWT_SECRET=your_secret_key
 ```
 
