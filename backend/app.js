@@ -9,7 +9,7 @@ import ownerRoutes from './routes/owner.js';
 dotenv.config();
 const app = express();
 app.use(cors({
-  origin: '*', // Allow all origins for now to fix the issue
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
