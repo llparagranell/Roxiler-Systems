@@ -8,7 +8,12 @@ import ownerRoutes from './routes/owner.js';
 
 dotenv.config();
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: '*', // Allow all origins for now to fix the issue
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 app.use(express.json());
 
 app.use('/auth', authRoutes);
@@ -18,6 +23,13 @@ app.use('/owner', ownerRoutes);
 
 app.get('/', (req, res) => {
   res.json({ message: 'Rating platform backend is running' });
+});
+
+// Global error handler to ensure CORS headers are sent on errors
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.header('Access-Control-Allow-Origin', '*'); // Fallback CORS for errors
+  res.status(500).json({ message: err.message || 'Internal Server Error' });
 });
 
 const port = process.env.PORT || 4000;
