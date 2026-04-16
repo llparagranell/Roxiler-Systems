@@ -4,7 +4,7 @@ A full-stack project featuring role-based dashboards for administrators, store o
 
 ## Demo
 
-![Application Walkthrough](Demo.mp4)
+[View the Application Walkthrough (Demo.mp4)](./Demo.mp4)
 
 ## Features
 
